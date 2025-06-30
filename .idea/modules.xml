@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/chess-game.iml" filepath="$PROJECT_DIR$/chess-game.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chess-game.main.iml" filepath="$PROJECT_DIR$/.idea/modules/chess-game.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chess-game.test.iml" filepath="$PROJECT_DIR$/.idea/modules/chess-game.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ood-practice.iml" filepath="$PROJECT_DIR$/.idea/ood-practice.iml" />
       <module fileurl="file://$PROJECT_DIR$/parking-lot.iml" filepath="$PROJECT_DIR$/parking-lot.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/parking-lot.main.iml" filepath="$PROJECT_DIR$/.idea/modules/parking-lot.main.iml" />

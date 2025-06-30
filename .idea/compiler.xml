@@ -2,6 +2,9 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="chess-game" target="23" />
+      <module name="chess-game.main" target="23" />
+      <module name="chess-game.test" target="23" />
       <module name="parking-lot" target="23" />
       <module name="parking-lot.main" target="23" />
       <module name="parking-lot.test" target="23" />
