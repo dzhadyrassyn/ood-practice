@@ -1,9 +1,5 @@
 package dzhadyrassyn.coding.challenges.parking.lot;
 
-import dzhadyrassyn.coding.challenges.parking.lot.Floor;
-import dzhadyrassyn.coding.challenges.parking.lot.ParkingSpace;
-import dzhadyrassyn.coding.challenges.parking.lot.Vehicle;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

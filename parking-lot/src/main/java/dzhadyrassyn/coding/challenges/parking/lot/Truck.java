@@ -1,7 +1,5 @@
 package dzhadyrassyn.coding.challenges.parking.lot;
 
-import dzhadyrassyn.coding.challenges.parking.lot.Vehicle;
-
 public class Truck extends Vehicle {
 
     public Truck(String licensePlate) {

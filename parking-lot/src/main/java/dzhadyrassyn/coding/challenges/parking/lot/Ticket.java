@@ -1,10 +1,8 @@
 package dzhadyrassyn.coding.challenges.parking.lot;
 
-import dzhadyrassyn.coding.challenges.parking.lot.Vehicle;
-
 public class Ticket {
 
-    private long startTime;
+    private final long startTime;
     private long endTime;
     private Vehicle vehicle;
 

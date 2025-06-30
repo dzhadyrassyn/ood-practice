@@ -2,7 +2,7 @@ package dzhadyrassyn.coding.challenges.parking.lot;
 
 public abstract class Vehicle {
 
-    private String licensePlate;
+    private final String licensePlate;
 
     public Vehicle(String licensePlate) {
         this.licensePlate = licensePlate;
