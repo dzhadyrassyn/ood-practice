@@ -11,11 +11,14 @@ public class Square {
     }
 
     public boolean isOccupied() {
-        return this.position == null;
+        return this.position != null;
     }
 
     public Piece getPiece() {
         return piece;
     }
 
+    public void setPiece(Piece piece) {
+        this.piece = piece;
+    }
 }

@@ -2,7 +2,7 @@ package dzhadyrassyn.coding.challenges.chess.game;
 
 public class Board {
 
-    private Square[][] board;
+    private final Square[][] board;
     private final int N = 8;
     private final int M = 8;
 
@@ -34,5 +34,16 @@ public class Board {
             }
             System.out.println();
         }
+    }
+
+    public Square getSquare(Position position) {
+        return board[position.getRow()][position.getCol()];
+    }
+
+    public void move(Square squareFrom, Square squareTo) {
+        Piece piece = squareFrom.getPiece();
+        squareFrom.setPiece(null);
+
+        squareTo.setPiece(piece);
     }
 }
