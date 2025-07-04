@@ -17,7 +17,7 @@ public class Game {
         Square squareFrom = board.getSquare(from);
         Square squareTo = board.getSquare(to);
 
-        if (squareFrom.getPiece() != null && squareFrom.getPiece().canMove(squareTo)) {
+        if (squareFrom.getPiece() != null && squareFrom.getPiece().canMove(squareFrom, squareTo, board)) {
             board.move(squareFrom, squareTo);
         }
     }

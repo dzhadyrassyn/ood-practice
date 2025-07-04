@@ -6,5 +6,10 @@ public class Main {
 
         Game game = new Game();
         game.printBoard();
+
+        System.out.println();
+
+        game.move(new Position(1, 1), new Position(3, 1));
+        game.printBoard();
     }
 }

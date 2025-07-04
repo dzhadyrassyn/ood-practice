@@ -14,12 +14,16 @@ public class Board {
 
     private void initBoard() {
 
-        for(int j = 0; j < M; j++) {
-            board[1][j] = new Square(new Pawn(Color.WHITE), new Position(1, j));
-        }
-
-        for(int j = 0; j < M; j++) {
-            board[6][j] = new Square(new Pawn(Color.BLACK), new Position(6, j));
+        for (int i = 0; i < N; i++) {
+            for(int j = 0; j < M; j++) {
+                if(i == 1) {
+                    board[i][j] = new Square(new Pawn(Color.WHITE), new Position(i, j));
+                } else if (i == 6) {
+                    board[i][j] = new Square(new Pawn(Color.BLACK), new Position(i, j));
+                } else {
+                    board[i][j] = new Square(null, new Position(i, j));
+                }
+            }
         }
     }
 
@@ -40,10 +44,13 @@ public class Board {
         return board[position.getRow()][position.getCol()];
     }
 
+    public Square getSquare(int row, int col) {
+        return board[row][col];
+    }
+
     public void move(Square squareFrom, Square squareTo) {
         Piece piece = squareFrom.getPiece();
         squareFrom.setPiece(null);
-
         squareTo.setPiece(piece);
     }
 }

@@ -11,7 +11,7 @@ public class Square {
     }
 
     public boolean isOccupied() {
-        return this.position != null;
+        return this.piece != null;
     }
 
     public Piece getPiece() {
@@ -20,5 +20,9 @@ public class Square {
 
     public void setPiece(Piece piece) {
         this.piece = piece;
+    }
+
+    public Position getPosition() {
+        return position;
     }
 }

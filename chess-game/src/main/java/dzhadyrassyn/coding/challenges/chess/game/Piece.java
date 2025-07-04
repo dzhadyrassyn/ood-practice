@@ -8,7 +8,7 @@ public abstract class Piece {
         this.color = color;
     }
 
-    public abstract boolean canMove(Square destination);
+    public abstract boolean canMove(Square from, Square destination, Board board);
 
     public Color getColor() {
         return color;
