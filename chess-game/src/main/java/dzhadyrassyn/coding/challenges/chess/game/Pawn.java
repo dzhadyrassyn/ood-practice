@@ -29,6 +29,20 @@ public class Pawn extends Piece {
             }
         }
 
+        if (getColor() == Color.BLACK) {
+            if (fromRow - toRow > 2) {
+                return false;
+            }
+        }
+
+        if (getColor() == Color.BLACK) {
+            for (int i = fromRow - 1; i >= toRow; i--) {
+                if (board.getSquare(i, toCol).isOccupied()) {
+                    return false;
+                }
+            }
+        }
+
         return true;
     }
 
