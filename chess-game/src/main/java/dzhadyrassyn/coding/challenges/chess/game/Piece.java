@@ -3,6 +3,7 @@ package dzhadyrassyn.coding.challenges.chess.game;
 public abstract class Piece {
 
     private final Color color;
+    private Position position;
 
     public Piece(Color color) {
         this.color = color;
@@ -12,5 +13,13 @@ public abstract class Piece {
 
     public Color getColor() {
         return color;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 }
