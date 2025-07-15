@@ -7,13 +7,12 @@ public class Board {
     private final int M = 8;
 
     public Board() {
-        board = new Square[N][M];
+        this.board = new Square[N][M];
 
-        initBoard();
+        setupInitialPositions();
     }
 
-    private void initBoard() {
-
+    private void setupInitialPositions() {
         for (int i = 0; i < N; i++) {
             for(int j = 0; j < M; j++) {
                 if(i == 1) {
@@ -41,7 +40,7 @@ public class Board {
     }
 
     public Square getSquare(Position position) {
-        return board[position.getRow()][position.getCol()];
+        return board[position.row()][position.col()];
     }
 
     public Square getSquare(int row, int col) {

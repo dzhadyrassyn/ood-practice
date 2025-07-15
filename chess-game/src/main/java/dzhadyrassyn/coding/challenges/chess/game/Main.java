@@ -8,7 +8,10 @@ public class Main {
 
         game.move(new Position(1, 1), new Position(3, 1));
 
-        game.move(new Position(6, 1), new Position(4, 1));
+        game.move(new Position(6, 2), new Position(4, 2));
+        game.printBoard();
+
+        game.move(new Position(3, 1), new Position(4, 2));
         game.printBoard();
     }
 }

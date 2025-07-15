@@ -7,43 +7,37 @@ public class Pawn extends Piece {
     }
 
     @Override
-    public boolean canMove(Square from, Square destination, Board board) {
+    public boolean canMove(Square from, Square to, Board board) {
 
-        int fromRow = from.getPosition().getRow();
-        int fromCol = from.getPosition().getCol();
+        int fromRow = from.getPosition().row();
+        int fromCol = from.getPosition().col();
+        int toRow = to.getPosition().row();
+        int toCol = to.getPosition().col();
 
-        int toRow = destination.getPosition().getRow();
-        int toCol = destination.getPosition().getCol();
+        int direction = getColor() == Color.WHITE ? 1 : -1;
+        int startRow = getColor() == Color.WHITE ? 1 : 6;
 
-        if (getColor() == Color.WHITE) {
-            if (toRow - fromRow > 2) {
-                return false;
+        if (fromCol != toCol) {
+            if (Math.abs(fromCol - toCol) == 1 && toRow - fromRow == direction) {
+                return to.isOccupied() && to.getPiece().getColor() != this.getColor();
             }
+            return false;
         }
 
-        if (getColor() == Color.WHITE) {
-            for (int i = fromRow + 1; i <= toRow; i++) {
-                if (board.getSquare(i, fromCol).isOccupied()) {
-                    return false;
-                }
-            }
+        if ((toRow - fromRow) * direction <= 0) {
+            return false;
         }
 
-        if (getColor() == Color.BLACK) {
-            if (fromRow - toRow > 2) {
-                return false;
-            }
+        if (toRow - fromRow == direction && !to.isOccupied()) {
+            return true;
         }
 
-        if (getColor() == Color.BLACK) {
-            for (int i = fromRow - 1; i >= toRow; i--) {
-                if (board.getSquare(i, toCol).isOccupied()) {
-                    return false;
-                }
-            }
+        if (fromRow == startRow && toRow - fromRow == 2 * direction) {
+            int midRow = fromRow + direction;
+            return !board.getSquare(midRow, fromCol).isOccupied() && !to.isOccupied();
         }
 
-        return true;
+        return false;
     }
 
     @Override
