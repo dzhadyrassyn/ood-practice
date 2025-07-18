@@ -13,6 +13,15 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/elevator-system" />
+        <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/7.5" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/elevator-system" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/parking-lot" />
         <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/7.5" />
         <option name="modules">
