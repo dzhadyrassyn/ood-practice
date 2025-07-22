@@ -1,9 +1,13 @@
 package dzhadyrassyn.coding.challenges.chess.game;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
+        ElevatorFacade elevatorFacade = new ElevatorFacade(2);
+        elevatorFacade.handlePickupRequest(3, Direction.UP);
+        elevatorFacade.handlePickupRequest(7, Direction.DOWN);
+        for (int i = 0; i < 10; i++) {
+            elevatorFacade.stepAll();
+        }
     }
 }
